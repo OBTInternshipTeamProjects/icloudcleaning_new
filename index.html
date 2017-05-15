@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Icloud Cleaning Service</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="content-container">
+			<div class="landing-page_container hide show">
+				<div class="landing-image"></div>				
+
+				<div class="company-logo">
+					<img src="assets/images/cloud.png">
+				</div>
+			</div>
+			<div id="home-cleaning" class="home-cleaning_container hide">
+				<div class="home-img">
+					<img src="assets/images/home.jpg">	
+				</div>
+				<div class="home-info">					
+					<h1>Home Cleaning</h1>
+					<h2>What does this include</h2>
+					
+					<br>
+
+					<p>We offer a variety of home cleaning service</p>
+
+					<br>
+
+					<button class="accordion">Bedroom & Living Room</button>
+					<div class="panel">
+						<p>
+							Wipe down tables and chairs.<br>
+							Removing dirt from carpets using high-powered vacuums.<br>
+							Removing garbage and debris.
+						</p>
+					</div> 
+					
+					<button class="accordion">Bathroom & Kitchen</button>
+					<div class="panel">
+						<p>
+							Wash Dishes<br>
+							Clean counters<br>
+							Stove
+						</p>
+					</div> 
+				
+					<button class="accordion">Extra Services</button>
+					<div class="panel">
+						<p>	
+							Polished furniture.<br>
+							Dusting window sills and desk.<br>
+							Proper removal of dust and careful treatment to blinds and mini blinds.
+						</p>
+					</div> 
+					<br>
+					<p>There is a 3hr minimum</p>								
+				</div>						
+			</div>
+			<div  id="business-cleaning" class="business-cleaning_container hide">
+				<div class="business-img">
+					<img src="assets/images/office.jpg">
+				</div>
+				<div class="business-info">
+					<h1>Business Cleaning</h1>
+					<h2>What is included in our cleaning?</h2>
+					<br>
+					<p>We clean offices, rooms, hallways, lobbies, restrooms, elevators, and all other work areas</p>
+
+					<br>
+					
+					<button class="accordion">Lobbies & Conference Rooms</button>
+					<div class="panel">
+						<p>
+							Wipe down tables and chairs.<br>
+							Removing dirt from carpets using high-powered vacuums.<br>
+							Removing garbage and debris.
+						</p>
+					</div> 
+
+					
+					<button class="accordion">Break rooms</button>
+					<div class="panel">
+						<p>
+							Wash Dishes<br>
+							Clean counters<br>
+							Stove
+						</p>
+					</div> 
+
+					
+					<button class="accordion"> Kitchens</button>
+					<div class="panel">
+						<p>
+							Polished furniture.<br>
+							Dusting window sills and desk.<br>
+							Proper removal of dust and careful treatment to blinds and mini blinds.
+						</p>
+					</div>
+					<br>
+					<p>There is a 3hr minimum</p>			
+				</div>
+			</div>
+			<div  id="contact-us" class="contact-us_container hide">
+				<div class="contact-us">
+					<form>
+						<h1>Hours of Operation</h1>
+						<h3>Office Hours</h3>
+						<ul>
+							<li>Mondays to Fridays: 9am to 5pm</li>
+							<li>Cleaning Services are 7 days a week</li>
+							<li>Email: info@icloudcleaning.com</li>
+						</ul>
+						<img src="assets/images/bottle.png">
+					</form>
+
+					<form action="mailto:info@icloudcleaning.com?subject=Service%20%Contact" method="post" enctype="text/plain">
+						<h1>Contact Us</h1>
+						<input type="text" name="fname" class="contact-input" placeholder="First Name" required></input>
+						<input type="text" name="lname" class="contact-input" placeholder="Last Name" required></input>
+						<input type="tel" name="pnum" class="contact-input" placeholder="Phone-number" required></input>
+						<br>
+						<select name="type" required>
+							<option selected="true" disabled>-- PLEASE SELECT ONE --</option>
+							<option>Home Services</option>
+							<option>Business Services</option>
+						</select>
+						<br>
+						<input type="email" class="contact-input" placeholder="Email" required></input>
+						<br>
+		 				<button type="submit">Send</button>
+					</form>	
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="navigation-container">
+			<nav class="navigation">
+				<div class="nav-btn_container">
+					<div class="nav-btn" onclick="openPage('home-cleaning')">Home Services</div>
+					<div class="nav-btn" onclick="openPage('business-cleaning')">Business Services</div>
+					<div class="nav-btn" onclick="openPage('contact-us')">Contact Us</div>
+				</div>
+				<div class="back">
+					<a href="index.html" >
+						<img src="assets/images/back.png" title="Back to Home" width="75px" />
+					</a>
+				</div>
+			</nav>
+		</div>
+	</div>
+</body>
+<script>	
+
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	    acc[i].onclick = function(){
+	        this.classList.toggle("active");
+	        var panel = this.nextElementSibling;
+	        if (panel.style.display === "block") {
+	            panel.style.display = "none";
+	        } else {
+	            panel.style.display = "block";
+	        }
+	    }
+	}
+		function openPage(pageName) {
+		var i;
+		var x = document.getElementsByClassName("hide");
+		for (i = 0; i < x.length; i++) {
+		   x[i].style.display = "none";  
+		}
+		document.getElementById(pageName).style.display = "block";  
+	}
+</script>
+</html>

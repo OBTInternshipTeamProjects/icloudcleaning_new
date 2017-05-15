@@ -1,0 +1,284 @@
+body,div,nav,button,select,input,ul,li,h1,h2,h3,h4,h5,p{margin:0;padding:0;background-color: #E8E5DD;}
+form,input,button,select{border:1px solid black;}
+a{text-decoration:none;}
+ul{list-style:none;}
+
+@font-face {
+	font-family: 'Petita';
+	src: url("../fonts/PetitaLight.ttf");
+}
+
+* {
+	font-family: 'Petita';
+	line-height:1.618;
+}
+
+.content-container{
+	width:100%;
+	height:auto;
+	min-height:550px;
+}
+
+.hide{display:none;}
+.show{display:block;}
+
+
+/* Landing Page container */
+	.landing-page_container{
+		width:100%;
+		min-height:550px;
+	}
+	.landing-image{
+		width:100%;
+		min-height:550px;
+		background: url("../images/nyc.jpg") fixed no-repeat center;
+   	 	background-size: cover;
+		opacity:0.5;
+		position:absolute;
+			top:0;
+	}
+		.company-logo{
+			width:100%; min-width:200px; max-width:1080px;
+			height:100%;  min-height:550px; max-height:1080px;
+			margin:0 auto;
+			background:transparent;
+			opacity:1;
+			position:relative;
+		}
+		.company-logo img{width:100%;max-height:100%;margin:auto;position:absolute;}
+/* End of Landing Page */
+
+/* Home Cleaning container */
+	.home-info li {
+		list-style-type: none;
+	}
+
+	.home-info {
+		width: 30%;
+		margin-left: 3%;
+		float: left;
+		padding: 0 1%;
+		margin-top:25px;
+	}
+
+	.home-img {
+		width: 60%;
+		float: right;
+		margin-top:25px;
+	}
+
+	.home-img img {
+		width: 100%;
+		margin: 2%;
+		padding: 1%;
+		border: 1px solid grey;
+		height: 400px;
+	}
+/* End of Home Cleaning container */
+
+/* Business Cleaning container */
+	.business-info {
+		width: 30%;
+		float: left;
+		padding: 0 1%;
+		margin-top:25px;
+	}
+
+	.business-info li {
+		padding-bottom: 2%;
+		font-size: 1em;
+	}
+
+	.business-img {
+		width: 50%; 
+		height:100%;
+		float: left;
+		margin-top:25px;
+	}
+
+	.business-img img {
+		width: 90%;
+		height: 400px;
+		margin: 2%;
+		padding: 1%;
+		border: 1px solid black;
+	}
+/* End of Business Cleaning container */
+
+/* Styling of the Accordion */
+	/* Accordion / the ones inside the home and business tags */
+
+	button.accordion {
+	    background-color: #eee;
+	    color: black;
+	    cursor: pointer;
+	    padding: 18px;
+	    width: 100%;
+	    border: none;
+	    text-align: left;
+	    outline: none;
+	    font-size: 15px;
+	    transition: 0.4s;
+	}
+
+	button.accordion.active, button.accordion:hover {
+	    background-color: #AAA; 
+	}
+
+	div.panel {
+	    padding: 0 18px;
+	    display: none;
+	    background:#DDD;
+	    border:1px solid #CCC;
+	    border-top:none;
+	}
+	div.panel p{ 
+		margin:0;
+		background:inherit;
+	}
+/* End of Stylings for the Accordion */
+
+/* Contact Us container */
+	.contact-us_container {
+		text-align: center;
+	}
+	.contact-us{padding-top:25px;}
+	
+	.contact-us_container form {
+		border-radius: 10px;
+		width: 26%;
+		padding: 1%;
+		min-height: 500px;
+		float: left;
+		margin-left: 15%;
+	}
+	.contact-us_container input{ 
+		width: 80%;
+		margin: 15px 0;
+	    	padding: 3%;
+		box-sizing: border-box;
+		font-size: 14px;
+		color: black;
+	}
+	.contact-us_container select{
+		width: 80%;
+		height:43.91px;
+		text-align:center;
+		box-sizing: border-box;
+		font-size:14px;
+	}
+	input:focus, select:focus{
+		outline: 0;
+		box-shadow:
+			-2px -2px #CCC,
+			2px 2px #CCC,
+			2px -2px #CCC,
+			-2px 2px #CCC;
+	}
+	.contact-us_container button {
+	  text-transform: uppercase;
+	  outline: 0;
+	  width: 80%;
+	  padding: 15px;
+	  cursor: pointer;
+	  font-size: 14px;
+	  margin: 4% 0;
+	  background-color: #333;
+	  color:#BBB;
+	}
+/* End of Contact Us container */
+
+/* Navigation Container */
+	.navigation-container{
+		width:100%;
+		height:auto;
+		background:green;
+	}
+		.navigation{
+			width:100%;
+			margin-top:25px;
+			text-align:center;
+		}
+		.nav-btn_container{
+			width:100%;
+			max-height:300px;
+			margin:5px auto;
+			display:flex;
+			justify-content:center;
+		}
+		.nav-btn{
+			width:30%;
+			max-width:400px; 
+			height:auto;
+			min-height:55px;
+			letter-spacing:2px;
+			font-size:2em;
+			padding:5px 0;
+			display:inline-flex;
+		        -ms-flex-align: center;
+		        align-items: center;
+		        -webkit-box-align: center;
+			border: 1px solid black;
+        		justify-content: center;
+		}
+		/*.navigation ul{
+			width:90%;
+			margin:0 auto;
+			padding:30.9px 25px;
+		}
+		.navigation ul li{
+			width:30%;
+			height:45px;
+			display:inline-block;
+			text-align:center;
+			font-size: 2em;
+			margin:0 auto;
+			padding:0 5px;
+			border: 1px solid black;
+		}
+		.navigation ul li:focus{outline:0;}
+		.navigation ul li:hover{
+			background: rgba(0,0,0,0);
+			box-shadow: inset 0 0 0 3px black;
+		}*/
+		.navigation .back {width:100%;margin-top:25px;}
+		.navigation .back a{
+			width:75px;
+			height:75px;
+			text-decoration:none;
+			display:block;
+			margin:auto;
+		}
+/* End of Navigation Container*/
+
+@media only screen and (min-width:0px){
+	.content-container,.landing-image,.landing-page_container,.company-logo{min-height:350px;}
+	.navigation{margin-top:10px;}
+	.nav-btn{min-height:65px;font-size:1.2em;padding:0}
+}
+@media only screen and (min-width:767px){
+	.content-container,.landing-image,.landing-page_container,.company-logo{min-height:400px;}
+	.navigation{margin-top:25px;}
+}
+@media only screen and (min-width:1023px){
+	.content-container,.landing-image,.landing-page_container,.company-logo{min-height:550px;}
+	.navigation{margin-top:25px;}
+	.nav-btn{min-height:55px;font-size:1.2em;padding:10px 0;}
+}
+
+@media only screen and (min-width:1800px){	
+	.content-container,.landing-image,.landing-page_container,.company-logo{min-height:750px;}
+	.home-img,.business-img{height:600px;}
+}
+
+@media only screen and (min-width:0px) and (max-width:768px){	
+	.home-img,.business-img{display:none;}
+	.home-info, .business-info {
+		width: 100%;
+		margin-left: 3%;
+		float: none;
+		padding: 0 1%;
+		margin-top:25px;
+	}
+	.contact-us_container form{width:80%; margin-left:0; margin:0 auto; float:none;margin-bottom:20px;}
+}
